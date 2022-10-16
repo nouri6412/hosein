@@ -27,12 +27,33 @@ namespace WindowsFormsApp6
             {
                 string march = textBox1.Text.Substring(0,3);
                 string shift = textBox1.Text.Substring(3, 5);
+                txt_product.Text = (int.Parse(march) - 100).ToString();
+                double db = Convert.ToDouble(shift);
+                double mode = db % 3;
+                if(mode==1)
+                {
+                    txt_shift.Text = "1";
+                }
+                else if (mode == 2)
+                {
+                    txt_shift.Text = "2";
+                }
+                else
+                {
+                    txt_shift.Text = "3";
+                }
+                DateTime date= new DateTime(2013, 6, 12);
+                double t1 = db - mode;
+                t1 = t1 / 3;
+                TimeSpan ts = new TimeSpan(int.Parse(t1.ToString()), 0,0,0);
+                date = date + ts;
                 // string index = textBox1.Text.Substring(0, 3);
 
 
-                txt_product.Text = (int.Parse(march)-100).ToString();
-                txt_product.Text = "";
-                txt_shift.Text = "";
+
+                txt_date.Text = date.ToShortDateString();
+
+
             }
             catch
             {

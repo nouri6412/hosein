@@ -34,6 +34,7 @@ namespace WindowsFormsApp6
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Create = new System.Windows.Forms.Button();
             this.stiReport1 = new Stimulsoft.Report.StiReport();
             this.txtFrom = new System.Windows.Forms.TextBox();
@@ -49,6 +50,8 @@ namespace WindowsFormsApp6
             this.txtMerch = new System.Windows.Forms.TextBox();
             this.DrCount = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.test = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Create
@@ -232,11 +235,35 @@ namespace WindowsFormsApp6
             this.label6.TabIndex = 10;
             this.label6.Text = "تعداد :";
             // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(28, 285);
+            this.test.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.test.MaxLength = 4;
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(146, 22);
+            this.test.TabIndex = 12;
+            this.test.Text = "1";
+            this.test.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(302, 279);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 33);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Decode";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 321);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.DrCount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -252,8 +279,9 @@ namespace WindowsFormsApp6
             this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.Create);
             this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Barcode";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,6 +310,8 @@ namespace WindowsFormsApp6
         private TextBox txtMerch;
         private ComboBox DrCount;
         private Label label6;
+        private TextBox test;
+        private Button button2;
     }
 }
 

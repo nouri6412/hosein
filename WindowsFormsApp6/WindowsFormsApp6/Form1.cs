@@ -18,7 +18,7 @@ namespace WindowsFormsApp6
 
         public Form1()
         {
-            this.pivot = new DateTime(0x7dd, 6, 12);
+            this.pivot = new DateTime(2013, 6, 12);
             this.numb4 = 2;
             InitializeComponent();
         }
@@ -74,6 +74,7 @@ namespace WindowsFormsApp6
             int num3 = Convert.ToInt16(this.txtTo.Text);
             this.merchCode3 = Convert.ToInt16(this.txtMerch.Text) + 100;
             TimeSpan span = (TimeSpan)(this.persianDateTimePicker1.GregorianDate - this.pivot);
+           // MessageBox.Show(span.TotalDays.ToString());
             this.serieCode5 = (int)((span.TotalDays * 3.0) + Convert.ToDouble(this.cbShift.Text));
             Image[] imageArray = new Image[(num3 - num2) + 1];
             int cnt = 2;
@@ -127,10 +128,17 @@ namespace WindowsFormsApp6
                     }
                 }
                 string ss1 = this.merchCode3.ToString("D3") + this.serieCode5.ToString("D5") + index.ToString("D4");
+                test.Text = ss1;
                 imageArray[index - num2] = barcode.Encode(TYPE.EAN13, ss1);
                 index++;
             }
 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Decode frm = new Decode();
+            frm.ShowDialog();
         }
     }
 }
