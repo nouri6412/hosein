@@ -16,11 +16,93 @@ namespace WindowsFormsApp6
     {
         private DateTime pivot;
 
+        public db database;
+
         public Form1()
         {
             this.pivot = new DateTime(2013, 6, 12);
             this.numb4 = 2;
             InitializeComponent();
+            database = new db() { count=2, from=1, to=400, h=45, label=25, product=1, shift=1, w=188 };
+            try
+            {
+                if (System.IO.File.Exists(@"" + Environment.CurrentDirectory.ToString() + "\\mbm.db"))
+                {
+                    using (System.IO.Stream stream = System.IO.File.Open(@"" + Environment.CurrentDirectory.ToString() + "\\mbm.db", System.IO.FileMode.Open))
+                    {
+                        var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                        db salesman1 = (db)bformatter.Deserialize(stream);
+                        database = salesman1;
+                        try
+                        {
+                            txtFrom.Text = database.from.ToString();
+                        }
+                        catch { }
+                        try
+                        {
+                            txtTo.Text = database.to.ToString();
+                        }
+                        catch { }
+                        try
+                        {
+                            txt_w.Text = database.w.ToString();
+                        }
+                        catch { }
+
+                        try
+                        {
+                            txt_h.Text = database.h.ToString();
+                        }
+                        catch { }
+
+                        try
+                        {
+                            cbShift.Text = database.shift.ToString();
+                        }
+                        catch { }
+
+                        try
+                        {
+                           cbLabel.Text = database.label.ToString();
+                        }
+                        catch { }
+
+                        try
+                        {
+                            txtMerch.Text = database.product.ToString();
+                        }
+                        catch { }
+
+                        try
+                        {
+                            DrCount.Text = database.product.ToString();
+                        }
+                        catch { }
+                    }
+                    //  System.IO.File.Delete(ss);
+                }
+            }
+            catch { }
+        }
+
+        public void saveDB()
+        {
+            database.h =int.Parse( txt_h.Text);
+            database.w = int.Parse(txt_w.Text);
+            database.product = int.Parse(txtMerch.Text);
+            database.count = int.Parse(DrCount.Text);
+            database.from = int.Parse(txtFrom.Text);
+            database.to = int.Parse(txtTo.Text);
+            database.shift = int.Parse(cbShift.Text);
+            try
+            {
+                using (System.IO.Stream stream = System.IO.File.Open(@"" + Environment.CurrentDirectory.ToString() + "\\mbm.db", System.IO.FileMode.Create))
+                {
+                    var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                    bformatter.Serialize(stream, database);
+                }
+            }
+            catch { }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -58,14 +140,26 @@ namespace WindowsFormsApp6
             int num = 60;
             if (this.cbLabel.Text == "label")
             {
-                num = 0x2d;
+                num = 45;
             }
+
+            int width_image = 188;
+            int height_image = 45;
+
+            try
+            {
+
+            }
+            catch
+            {
+            }
+
             Barcode barcode = new Barcode
             {
                 IncludeLabel = true,
                 Alignment = AlignmentPositions.CENTER,
-                Width = 200,
-                Height = num,
+                Width = width_image,
+                Height = height_image,
                 RotateFlipType = RotateFlipType.RotateNoneFlipNone,
                 BackColor = Color.White,
                 ForeColor = Color.Black
@@ -140,5 +234,23 @@ namespace WindowsFormsApp6
             Decode frm = new Decode();
             frm.ShowDialog();
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            saveDB();
+        }
+    }
+
+    [Serializable]
+    public class db
+    {
+        public int shift { get; set; }
+        public int label { get; set; }
+        public int product { get; set; }
+        public int count { get; set; }
+        public int w { get; set; }
+        public int h { get; set; }
+        public int from { get; set; }
+        public int to { get; set; }
     }
 }

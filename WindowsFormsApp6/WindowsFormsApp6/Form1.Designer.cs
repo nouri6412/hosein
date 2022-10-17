@@ -52,11 +52,15 @@ namespace WindowsFormsApp6
             this.label6 = new System.Windows.Forms.Label();
             this.test = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.txt_w = new System.Windows.Forms.TextBox();
+            this.txt_h = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(80, 242);
+            this.Create.Location = new System.Drawing.Point(80, 300);
             this.Create.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(105, 33);
@@ -91,7 +95,7 @@ namespace WindowsFormsApp6
             this.txtFrom.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtFrom.MaxLength = 4;
             this.txtFrom.Name = "txtFrom";
-            this.txtFrom.Size = new System.Drawing.Size(91, 22);
+            this.txtFrom.Size = new System.Drawing.Size(91, 23);
             this.txtFrom.TabIndex = 2;
             this.txtFrom.Text = "1";
             // 
@@ -101,7 +105,7 @@ namespace WindowsFormsApp6
             this.txtTo.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtTo.MaxLength = 4;
             this.txtTo.Name = "txtTo";
-            this.txtTo.Size = new System.Drawing.Size(94, 22);
+            this.txtTo.Size = new System.Drawing.Size(94, 23);
             this.txtTo.TabIndex = 3;
             this.txtTo.Text = "400";
             // 
@@ -110,7 +114,7 @@ namespace WindowsFormsApp6
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(182, 91);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 14);
+            this.label1.Size = new System.Drawing.Size(16, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "تا";
             // 
@@ -119,7 +123,7 @@ namespace WindowsFormsApp6
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(313, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(14, 14);
+            this.label2.Size = new System.Drawing.Size(16, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "از";
             // 
@@ -132,7 +136,7 @@ namespace WindowsFormsApp6
             "3"});
             this.cbShift.Location = new System.Drawing.Point(80, 119);
             this.cbShift.Name = "cbShift";
-            this.cbShift.Size = new System.Drawing.Size(160, 22);
+            this.cbShift.Size = new System.Drawing.Size(160, 24);
             this.cbShift.TabIndex = 5;
             this.cbShift.Text = "1";
             // 
@@ -146,7 +150,7 @@ namespace WindowsFormsApp6
             "3"});
             this.cbLabel.Location = new System.Drawing.Point(80, 152);
             this.cbLabel.Name = "cbLabel";
-            this.cbLabel.Size = new System.Drawing.Size(160, 22);
+            this.cbLabel.Size = new System.Drawing.Size(160, 24);
             this.cbLabel.TabIndex = 6;
             this.cbLabel.Text = "label";
             // 
@@ -156,7 +160,7 @@ namespace WindowsFormsApp6
             this.label3.Location = new System.Drawing.Point(280, 123);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(44, 14);
+            this.label3.Size = new System.Drawing.Size(50, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "شیفت:";
             // 
@@ -166,7 +170,7 @@ namespace WindowsFormsApp6
             this.label4.Location = new System.Drawing.Point(294, 155);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(31, 14);
+            this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "لیبل:";
             // 
@@ -191,7 +195,7 @@ namespace WindowsFormsApp6
             this.label5.Location = new System.Drawing.Point(263, 187);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(64, 14);
+            this.label5.Size = new System.Drawing.Size(70, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "کد محصول:";
             // 
@@ -201,7 +205,7 @@ namespace WindowsFormsApp6
             this.txtMerch.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtMerch.MaxLength = 3;
             this.txtMerch.Name = "txtMerch";
-            this.txtMerch.Size = new System.Drawing.Size(160, 22);
+            this.txtMerch.Size = new System.Drawing.Size(160, 23);
             this.txtMerch.TabIndex = 8;
             this.txtMerch.Text = "1";
             // 
@@ -221,7 +225,7 @@ namespace WindowsFormsApp6
             "10"});
             this.DrCount.Location = new System.Drawing.Point(80, 212);
             this.DrCount.Name = "DrCount";
-            this.DrCount.Size = new System.Drawing.Size(160, 22);
+            this.DrCount.Size = new System.Drawing.Size(160, 24);
             this.DrCount.TabIndex = 11;
             this.DrCount.Text = "2";
             // 
@@ -231,24 +235,24 @@ namespace WindowsFormsApp6
             this.label6.Location = new System.Drawing.Point(287, 215);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(40, 14);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "تعداد :";
             // 
             // test
             // 
-            this.test.Location = new System.Drawing.Point(28, 285);
+            this.test.Location = new System.Drawing.Point(12, 355);
             this.test.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.test.MaxLength = 4;
             this.test.Name = "test";
-            this.test.Size = new System.Drawing.Size(146, 22);
+            this.test.Size = new System.Drawing.Size(146, 23);
             this.test.TabIndex = 12;
             this.test.Text = "1";
             this.test.Visible = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(302, 279);
+            this.button2.Location = new System.Drawing.Point(306, 345);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 33);
@@ -257,11 +261,55 @@ namespace WindowsFormsApp6
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // txt_w
+            // 
+            this.txt_w.Location = new System.Drawing.Point(80, 244);
+            this.txt_w.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_w.MaxLength = 4;
+            this.txt_w.Name = "txt_w";
+            this.txt_w.Size = new System.Drawing.Size(91, 23);
+            this.txt_w.TabIndex = 14;
+            this.txt_w.Text = "188";
+            // 
+            // txt_h
+            // 
+            this.txt_h.Location = new System.Drawing.Point(80, 270);
+            this.txt_h.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.txt_h.MaxLength = 4;
+            this.txt_h.Name = "txt_h";
+            this.txt_h.Size = new System.Drawing.Size(91, 23);
+            this.txt_h.TabIndex = 15;
+            this.txt_h.Text = "45";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(283, 247);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(36, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "عرض";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(283, 277);
+            this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label8.Size = new System.Drawing.Size(31, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "طول";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 321);
+            this.ClientSize = new System.Drawing.Size(423, 392);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_h);
+            this.Controls.Add(this.txt_w);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.test);
             this.Controls.Add(this.DrCount);
@@ -278,10 +326,11 @@ namespace WindowsFormsApp6
             this.Controls.Add(this.txtTo);
             this.Controls.Add(this.txtFrom);
             this.Controls.Add(this.Create);
-            this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Barcode";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -312,6 +361,10 @@ namespace WindowsFormsApp6
         private Label label6;
         private TextBox test;
         private Button button2;
+        private TextBox txt_w;
+        private TextBox txt_h;
+        private Label label7;
+        private Label label8;
     }
 }
 
