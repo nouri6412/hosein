@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -50,8 +51,8 @@ namespace WindowsFormsApp6
                 // string index = textBox1.Text.Substring(0, 3);
 
 
-
-                txt_date.Text = date.ToShortDateString();
+                PersianCalendar pc = new PersianCalendar();
+                txt_date.Text = string.Format("{0}/{1}/{2}", pc.GetYear(date), pc.GetMonth(date), pc.GetDayOfMonth(date));
 
 
             }
