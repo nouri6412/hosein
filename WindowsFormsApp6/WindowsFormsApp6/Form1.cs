@@ -172,7 +172,7 @@ namespace WindowsFormsApp6
                 RotateFlipType = RotateFlipType.RotateNoneFlipNone,
                 BackColor = Color.White,
                 ForeColor = Color.Black,
-                LabelFont = new Font("Arial", fontSize, FontStyle.Regular)
+                LabelFont = new Font("Arial", fontSize, FontStyle.Bold)
         };
             int num2 = Convert.ToInt16(this.txtFrom.Text);
             int num3 = Convert.ToInt16(this.txtTo.Text);
