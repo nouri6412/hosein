@@ -22,3 +22,17 @@ E:\git\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.cspro
 E:\git\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 E:\git\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\BarCodeGenerate.exe
 E:\git\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\BarCodeGenerate.pdb
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\bin\Debug\BarCodeGenerate.exe.config
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\bin\Debug\BarCodeGenerate.exe
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\bin\Debug\BarCodeGenerate.pdb
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\bin\Debug\ADODB.dll
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.AssemblyReference.cache
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.SuggestedBindingRedirects.cache
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Decode.resources
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Form1.resources
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Properties.Resources.resources
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.GenerateResource.cache
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\BarCodeGenerate.exe
+C:\xampp\htdocs\hosein\WindowsFormsApp6\WindowsFormsApp6\obj\Debug\BarCodeGenerate.pdb

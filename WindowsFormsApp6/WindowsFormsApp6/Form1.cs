@@ -54,6 +54,11 @@ namespace WindowsFormsApp6
                             txt_h.Text = database.h.ToString();
                         }
                         catch { }
+                        try
+                        {
+                            txtFont.Text = database.font.ToString();
+                        }
+                        catch { }
 
                         try
                         {
@@ -89,6 +94,7 @@ namespace WindowsFormsApp6
         {
             database.h =int.Parse( txt_h.Text);
             database.w = int.Parse(txt_w.Text);
+            database.font = int.Parse(txtFont.Text);
             database.product = int.Parse(txtMerch.Text);
             database.count = int.Parse(DrCount.Text);
             database.from = int.Parse(txtFrom.Text);
@@ -145,14 +151,17 @@ namespace WindowsFormsApp6
 
             int width_image = 188;
             int height_image = 45;
-
+            int fontSize = 12;
             try
             {
-
+                width_image = int.Parse(txt_w.Text);
+                height_image = int.Parse(txt_h.Text);
+                fontSize = int.Parse(txtFont.Text); // حداقل سایز 4
             }
             catch
             {
             }
+      
 
             Barcode barcode = new Barcode
             {
@@ -162,8 +171,9 @@ namespace WindowsFormsApp6
                 Height = height_image,
                 RotateFlipType = RotateFlipType.RotateNoneFlipNone,
                 BackColor = Color.White,
-                ForeColor = Color.Black
-            };
+                ForeColor = Color.Black,
+                LabelFont = new Font("Arial", fontSize, FontStyle.Regular)
+        };
             int num2 = Convert.ToInt16(this.txtFrom.Text);
             int num3 = Convert.ToInt16(this.txtTo.Text);
             this.merchCode3 = Convert.ToInt16(this.txtMerch.Text) + 100;
@@ -252,5 +262,6 @@ namespace WindowsFormsApp6
         public int h { get; set; }
         public int from { get; set; }
         public int to { get; set; }
+        public int font { get; set; }
     }
 }
